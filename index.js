@@ -4,7 +4,7 @@ const fs = require('fs');
 const hostname = '127.0.0.1';
 const port = 3000;
 const home = fs.readFileSync('index.html')
-const backendsimpleabout = fs.readFileSync('./backendsimple/about.html')
+const backendsimpleabout = fs.readFileSync('./about.html')
 // const services = fs.readFileSync('./services.html')
 // const socialmedia = fs.readFileSync('./socialmedia.html')
 // const contact = fs.readFileSync('./contact.html')
@@ -22,7 +22,7 @@ const server = http.createServer((req, res)=>{
         res.end(home);
     }
     else if(url == '/backendsimple/about'){
-        res.end(backendabout);
+        res.end(backendsimpleabout);
     }
  
     else{
